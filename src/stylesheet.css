@@ -1,0 +1,62 @@
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.light .column-box {
+	background: #ffffff;
+	color: #000000;
+}
+
+.dark .column-box {
+	background: #3f3f3f;
+	color: #ffffff;
+}
+
+.colored .column-box {
+	background: #239ca9;
+	color: #ffffff;
+}
+
+.column-box {
+	min-width: 400px;
+	min-height: 400px;
+	margin: 16px;
+	padding: 16px;
+	border-radius: 4px;
+	transition: transform 3s;
+}
+
+.rotate .column-box {
+	transform: rotate(90deg);
+}
+
+.scale .column-box {
+	transform: scale(0.5, 0.5);
+}
+
+@keyframes bounce {
+	0% {
+		transform: translate(0, 0);
+	}
+	
+	50% {
+		transform: translate(0, 48px);
+	}
+	
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+.bounce .column-box label {
+	animation: bounce 6s infinite;
+}
+
+.column-box :first-child {
+	font-size: 300%;
+	margin-bottom: 0.5em;
+}
