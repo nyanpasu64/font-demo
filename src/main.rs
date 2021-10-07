@@ -91,25 +91,25 @@ fn main() {
 			.orientation(gtk::Orientation::Horizontal)
 			.build();
 		
-		let rotate_checkbox = gtk::CheckButton::builder()
-			.label("Rotate")
+		let smooth_checkbox = gtk::CheckButton::builder()
+			.label("Smooth")
 			.build();
 		
-		rotate_checkbox.connect_toggled(|checkbox| {
+		smooth_checkbox.connect_toggled(|checkbox| {
 			let layout_box = checkbox.parent().unwrap().parent().unwrap();
 			
 			if checkbox.is_active() {
-				if !layout_box.has_css_class("rotate") {
-					layout_box.add_css_class("rotate");
+				if !layout_box.has_css_class("smooth") {
+					layout_box.add_css_class("smooth");
 				}
 			} else {
-				if layout_box.has_css_class("rotate") {
-					layout_box.remove_css_class("rotate");
+				if layout_box.has_css_class("smooth") {
+					layout_box.remove_css_class("smooth");
 				}
 			}
 		});
 		
-		controls_box.append(&rotate_checkbox);
+		controls_box.append(&smooth_checkbox);
 		
 		let scale_checkbox = gtk::CheckButton::builder()
 			.label("Scale")

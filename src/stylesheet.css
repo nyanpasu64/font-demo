@@ -27,15 +27,14 @@
 	margin: 16px;
 	padding: 16px;
 	border-radius: 4px;
-	transition: transform 3s;
 }
 
-.rotate .column-box {
-	transform: rotate(90deg);
+.smooth .column-box {
+	transition: transform 1s;
 }
 
 .scale .column-box {
-	transform: scale(0.5, 0.5);
+	transform: scale(0.9, 0.9);
 }
 
 @keyframes bounce {
